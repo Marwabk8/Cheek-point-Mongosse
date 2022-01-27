@@ -5,10 +5,7 @@ const { getproducts, deleteproduct, updateproduct, getOneProduct, addProduct } =
 
 const router=express.Router()
 
-router.get("/test",(req,res)=>{
-res.send("bonjour marwa");
 
-});
 
 router.post('/',addProduct)
 
