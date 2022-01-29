@@ -1,24 +1,30 @@
 
-import { Get_All_Products } from "../types";
+import { GET_ALL_PRODUCTS, TOGGLE_FALSE, TOGGLE_TRUE} from "../types";
 
 const initstate =
 {
 
 products: [],
-loading:true
+loading:true,
+edit:false
 
 };
 
-const productReducers= (state= initstate,{type,payload}) =>{
+const productsReducers= (state= initstate,{type,payload}) =>{
 switch (type) {
-    case Get_All_Products:
+    case GET_ALL_PRODUCTS:
     return{...state,products:payload,loading:false}
-       
+      
+    case TOGGLE_TRUE:
+    return{...state,edit:true}
+
+    case TOGGLE_FALSE:
+        return{...state,edit:false}
 
     default:
-       return state
+       return state;
 }
 
 
 }
-export default productReducers;
+export default productsReducers;

@@ -1,1 +1,3 @@
- export const Get_All_Products = "GET-ALL-PRODUCTS";
+export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
+export const TOGGLE_TRUE="TOGGLE_TRUE"
+export const TOGGLE_FALSE="TOGGLE_FALSE"

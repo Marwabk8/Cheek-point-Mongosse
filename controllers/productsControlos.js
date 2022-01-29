@@ -1,7 +1,9 @@
 const Product = require('../models/Product');
 
 exports.addProduct=async(req,res)=>{
-    const{brands,reference,price}=req.body
+    let {brands,reference,price}=req.body
+    price=Number(price)
+    reference=Number(reference)
     try {
         const product=new Product({
             brands,
