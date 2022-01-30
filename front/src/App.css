@@ -49,3 +49,19 @@ padding-top: 25%;
 
 
 }
+
+
+.carte{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width: 100%;
+}
+
+
+.addedit{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+
+}

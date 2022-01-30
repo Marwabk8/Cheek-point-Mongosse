@@ -15,7 +15,7 @@ function Product () {
 
   return( 
   
-  <div>
+  <div className='carte'>
 {products.map( el=><ProductCard product={el} key={el._id}/>)}
 
 

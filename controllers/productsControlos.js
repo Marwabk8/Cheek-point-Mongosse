@@ -43,7 +43,7 @@ exports.getproducts=async(req,res)=>{
     
     }
 
-    exports.updateproduct =async(req,res)=>
+    exports.updateproduct =async(req, res)=>
     {const {productId} = req.params;
     try {
         const product= await Product.findByIdAndUpdate(productId,{$set:{...req.body}});
@@ -56,10 +56,10 @@ exports.getproducts=async(req,res)=>{
     
     }
 
-    exports.getOneProduct=async(req,res)=>{
-        const {productId}= req.params
+    exports.getOneProduct=async(req, res)=>{
+        const {productId}= req.params;
         try {
-            const product= await Product.findById(product)
+            const product= await Product.findById(productId)
             res.send(product)
     
              

@@ -22,7 +22,7 @@ function ProductCard({product}) {
  
 <Card style={{ width: '18rem' }}>
 
-  <Card.Img variant="top" src="holder.js/100px180" />
+ 
   <Card.Body>
     <Card.Title> Brands:{product.brands} </Card.Title>
     <Card.Title> Reference :{product.reference}</Card.Title>
