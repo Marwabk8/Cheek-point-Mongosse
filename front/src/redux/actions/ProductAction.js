@@ -1,4 +1,5 @@
-import { GET_ALL_PRODUCTS, TOGGLE_FALSE, TOGGLE_TRUE  } from "../types"
+import { GET_ALL_PRODUCTS, GET_ONE_PRODUCT,  TOGGLE_FALSE, TOGGLE_TRUE
+  } from "../types"
 import axios from"axios"
 
 
@@ -64,5 +65,16 @@ export const toggleTrue = ()=>{
 export const toggleFalse =()=>{
     return{type:TOGGLE_FALSE}
 
+
+}
+
+export const getOneProduct=(id)=>async(dispatch)=> {
+    try { 
+        const res = await axios.get(`/api/product/${id}`);
+        dispatch({type:GET_ONE_PRODUCT, payload:res.data});
+        
+    } catch (error) {
+        console.log(error);
+    }
 
 }
